@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Локальна сторінка</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fa;
+      color: #333;
+      text-align: center;
+      margin-top: 50px;
+    }
+    form {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 10px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    #successMessage {
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Вітаємо на локальній зміненій сторінці!</h1>
+  <form id="loginForm">
+    <input id="username" type="text" placeholder="Ім'я користувача" required />
+    <input id="password" type="password" placeholder="Пароль" required />
+    <button id="loginButton" type="submit">Увійти</button>
+  </form>
+  <p id="successMessage" style="display: none;">Успішний вхід!</p>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
